@@ -1,0 +1,97 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container for the links */
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 80%;
+}
+
+/* Title Styles */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Style the links */
+.links {
+    list-style: none;
+    padding: 0;
+}
+
+.links a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 12px;
+    background-color: #0072ff;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for the links */
+.links a:hover {
+    transform: translateY(-5px);
+    background-color: #00c6ff;
+}
+
+/* Add a typing animation to the links */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background animation for visual effects */
+@keyframes moving-background {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/* Animated gradient effect on body */
+body {
+    animation: moving-background 10s ease-in-out infinite;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 30px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .links a {
+        font-size: 18px;
+    }
+}
